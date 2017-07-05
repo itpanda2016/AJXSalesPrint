@@ -27,7 +27,6 @@ namespace tqls_cdbdl
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
             this.dataGridView1.AutoGenerateColumns = false;
             //Test db=new Test();
             //this.dataGridView1.DataSource = db.test().Tables[0];
@@ -61,9 +60,9 @@ namespace tqls_cdbdl
             {
                 lbl_msg.Text = "";
             }
-            String sql ="select cast(year(m.lrsj) as varchar(10)) + '年' "+
-                        "+ cast(month(m.lrsj) as varchar(10)) + '月' "+
-                        "+ cast(day(m.lrsj) as varchar(10)) + '日'"+
+            String sql ="select cast(year(m.kpsj) as varchar(10)) + '年' "+
+                        "+ cast(month(m.kpsj) as varchar(10)) + '月' "+
+                        "+ cast(day(m.kpsj) as varchar(10)) + '日'"+
                         " lrsj2, "+
                         "c.zbs,c.zgjs,u.yhmc,k.bh,k.xm,k.dz,m.*  "+
                         "from tu_xskpd_m m left join tu_khzc k  "+

@@ -1,0 +1,15 @@
+﻿SELECT
+	TOP 10000 lrsj,
+	kpsj,
+convert(varchar(10),lrsj,120) as 录入日期,
+convert(varchar(10),kpsj,120) as 开票日期,
+	CASE
+WHEN CONVERT(VARCHAR(10), lrsj, 120) <> CONVERT(VARCHAR(10), kpsj, 120) THEN
+	'TRUE'
+ELSE
+	'FALSE'
+END
+FROM
+	tu_xskpd_m
+WHERE
+	lrsj > '2017-01-01'
